@@ -1,0 +1,24 @@
+{
+    "en": {
+      "login": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign Up Here",
+      "success": "Login successful",
+      "error": "Invalid email or password",
+      "language": "العربية"
+    },
+    "ar": {
+      "login": "تسجيل الدخول",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "submit": "تسجيل الدخول",
+      "noAccount": "ليس لديك حساب؟",
+      "signUp": "سجل هنا",
+      "success": "تم تسجيل الدخول بنجاح",
+      "error": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+      "language": "English"
+    }
+  }

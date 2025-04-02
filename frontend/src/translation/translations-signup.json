@@ -1,0 +1,38 @@
+{
+    "en": {
+      "signup": "Sign Up",
+      "username": "Username",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "password": "Password",
+      "submit": "Sign Up",
+      "haveAccount": "Already have an account?",
+      "login": "Return to Login",
+      "passwordRequirements": "Password must contain:",
+      "minLength": "8+ characters",
+      "upperCase": "1 uppercase letter",
+      "lowerCase": "1 lowercase letter",
+      "number": "1 number",
+      "specialChar": "1 special character (@$!%*?&)",
+      "emailUsed": "This email is used before.",
+      "language": "العربية"
+    },
+    "ar": {
+      "signup": "تسجيل حساب جديد",
+      "username": "اسم المستخدم",
+      "email": "البريد الإلكتروني",
+      "phoneNumber": "رقم الهانف",
+      "password": "كلمة المرور",
+      "submit": "تسجيل",
+      "haveAccount": "لديك حساب بالفعل؟",
+      "login": "العودة لتسجيل الدخول",
+      "passwordRequirements": "يجب أن تحتوي كلمة المرور على:",
+      "minLength": "8+ أحرف على الأقل",
+      "upperCase": "حرف كبير واحد على الأقل",
+      "lowerCase": "حرف صغير واحد على الأقل",
+      "number": "رقم واحد على الأقل",
+      "specialChar": "رمز خاص واحد (@$!%*?&)",
+      "emailUsed": "هذا البريد الإلكتروني مستخدم مسبقاً",
+      "language": "English"
+    }
+  }

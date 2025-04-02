@@ -1,0 +1,234 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Centering the login page */
+body {
+  background-color: #eef1f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* RTL/LTR Support */
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+/* background style start */
+.background {
+  width: 586px;
+  height: 415px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+.background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+.shape:first-child {
+  background: linear-gradient(#1845ad, #23a2f6);
+  left: -80px;
+  top: -80px;
+}
+.shape:last-child {
+  background: linear-gradient(to right, #ff512f, #f09819);
+  right: -30px;
+  bottom: -80px;
+}
+/* background style end */
+
+/* Login container */
+.login-box {
+  background: white;
+  padding: 40px;
+  width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
+/* Title */
+.login-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input fields */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.login-input:focus {
+  border-color: #0073e6;
+  box-shadow: 0 0 5px rgba(0, 115, 230, 0.3);
+}
+
+/* Login button */
+.login-button {
+  width: 100%;
+  background-color: #0073e6;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #005bb5;
+}
+
+/* Message display */
+.login-message {
+  margin-top: 10px;
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Signup section */
+.signup-section {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-section p {
+  color: #666;
+}
+
+.signup-href {
+  font-weight: bold;
+  color: #666;
+  text-decoration: none;
+}
+
+.signup-href:hover {
+  color: #0073e6;
+}
+
+.language-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #0073e6;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.language-button:hover {
+  background-color: #005bb5;
+}
+/* rtl style start*/
+
+.rtl .language-button {
+  right: auto;
+  left: 80px;
+}
+/* rtl style end*/
+
+/* media style start */
+@media screen and (max-width: 500px) {
+  .login-box {
+    width: 100vw;
+  }
+}
+/* media style end */
+
+/* dark mode style start */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .login-box {
+  background-color: rgba(40, 40, 40, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .login-title,
+.dark-mode .login-input,
+.dark-mode .login-message,
+.dark-mode .signup-section p {
+  color: white;
+}
+
+.dark-mode .login-input {
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+.dark-mode .login-input:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+}
+
+.dark-mode .login-button {
+  background-color: #1e90ff;
+}
+
+.dark-mode .login-button:hover {
+  background-color: #0073e6;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #0073e6;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dark-mode .dark-mode-toggle {
+  background-color: #ff9800;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #005bb5;
+}
+/* dark mode style end */
