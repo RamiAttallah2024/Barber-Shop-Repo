@@ -32,7 +32,7 @@ Ensure you have the following installed:
 1. **Clone the Repository**
 
    ```sh
-   git clone https://github.com/your-repo/barbershop-booking.git
+   git clone https://github.com/RamiAttallah2024/Barber-Shop-Repo.git
    cd barbershop-booking
    ```
 
@@ -89,6 +89,6 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For inquiries, please contact [your-email@example.com](mailto\:your-email@example.com).
+For inquiries, please contact [ramihattallah@gmail.com].
 
 (Not Finshed)
