@@ -40,9 +40,12 @@ const Login = () => {
         email,
         password,
       });
+      console.log("11", response);
+      console.log("22", response.data);
+
       localStorage.setItem("token", response.data.token);
       setMessage(translations[language].success);
-      navigate("/homePage");
+      // navigate("/homePage");
     } catch (error) {
       setMessage(translations[language].error);
     }

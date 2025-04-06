@@ -9,6 +9,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phoneNumber, setphoneNumber] = useState("");
+  const [role, setRole] = useState("user");
   const [message, setMessage] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -24,7 +25,7 @@ const Signup = () => {
   useEffect(() => {
     document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
     document.documentElement.lang = language;
-    localStorage.setItem("language", language); // Save language preference
+    localStorage.setItem("language", language);
   }, [language]);
 
   useEffect(() => {
@@ -35,6 +36,7 @@ const Signup = () => {
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "ar" : "en");
   };
+
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -79,6 +81,7 @@ const Signup = () => {
         email,
         password,
         phoneNumber,
+        role,
       });
       setMessage(response.data.message);
       setTimeout(() => navigate("/"), 2000);
@@ -86,6 +89,7 @@ const Signup = () => {
       setMessage(translations[language].emailUsed);
     }
   };
+
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
   };
@@ -160,6 +164,28 @@ const Signup = () => {
                 ))}
               </div>
             )}
+            <div className="radio-group">
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="role"
+                  value="user"
+                  checked={role === "user"}
+                  onChange={() => setRole("user")}
+                />
+                {t.user || "User"}
+              </label>
+              <label className="radio-label">
+                <input
+                  type="radio"
+                  name="role"
+                  value="shop"
+                  checked={role === "shop"}
+                  onChange={() => setRole("shop")}
+                />
+                {t.shop || "Shop"}
+              </label>
+            </div>
             <button
               type="submit"
               className="signup-button"

@@ -22,13 +22,13 @@ const pool = new Pool({
 
 // Signup Route
 app.post("/signup", async (req, res) => {
-  const { username, email, password, phoneNumber } = req.body;
+  const { username, email, password, phoneNumber, role } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
 
   try {
     const result = await pool.query(
-      "INSERT INTO users (username, email, password, phone_number) VALUES ($1, $2, $3, $4) RETURNING *",
-      [username, email, hashedPassword, phoneNumber]
+      "INSERT INTO users (username, email, password, phone_number, role) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+      [username, email, hashedPassword, phoneNumber, role]
     );
     const newUser = result.rows[0];
     res.status(201).json({ message: "User created", user: newUser });
@@ -50,7 +50,7 @@ app.post("/login", async (req, res) => {
       const token = jwt.sign({ id: user.id, email: user.email }, "secretkey", {
         expiresIn: "1h",
       });
-      res.json({ message: "Login successful", token });
+      res.json({ message: "Login successful", token, role: user.role });
     } else {
       res.status(401).json({ message: "Invalid email or password" });
     }
