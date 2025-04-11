@@ -57,7 +57,7 @@ const HomePage = () => {
         </div>
 
         <div className={`mobile-menu ${menuOpen ? "open" : ""}`} role="menu">
-          <Link to="/homePage" className="mobile-link" onClick={toggleMenu}>
+          <Link to="/" className="mobile-link" onClick={toggleMenu}>
             Home
           </Link>
           <Link to="/about" className="mobile-link" onClick={toggleMenu}>
