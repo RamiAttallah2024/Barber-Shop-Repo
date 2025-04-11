@@ -38,7 +38,7 @@ const HomePage = () => {
               </Link>
             </li>
             <li>
-              <button onClick={handleLogout} className="nav-link logout-btn">
+              <button onClick={handleLogout} className="logout-btn">
                 Logout
               </button>
             </li>
