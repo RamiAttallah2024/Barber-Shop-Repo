@@ -59,6 +59,23 @@ app.post("/login", async (req, res) => {
   }
 });
 
+// Create Barbershop Route
+app.post("/create-barbershop", async (req, res) => {
+  const { name, location, owner_id } = req.body;
+
+  try {
+    const result = await pool.query(
+      "INSERT INTO barbershops (name, location, owner_id) VALUES ($1, $2, $3) RETURNING *",
+      [name, location, owner_id]
+    );
+    res
+      .status(201)
+      .json({ message: "Barbershop created", barbershop: result.rows[0] });
+  } catch (error) {
+    res.status(500).json({ message: "Error creating barbershop", error });
+  }
+});
+
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

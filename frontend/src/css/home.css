@@ -169,6 +169,10 @@
   flex: 1;
 }
 
+.creatre-barbershop {
+  color: #c0392b;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {

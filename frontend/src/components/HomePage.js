@@ -79,8 +79,9 @@ const HomePage = () => {
       </nav>
 
       <main className="page-content">
-        <h2>Welcome to MyApp</h2>
-        <p>This is your dashboard content.</p>
+        <Link to="/create-barbershop" className="creatre-barbershop">
+          Create Barbershop
+        </Link>
       </main>
     </div>
   );
