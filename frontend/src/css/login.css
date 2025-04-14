@@ -7,7 +7,7 @@
 }
 
 /* Centering the login page */
-body {
+.login-page {
   background-color: #eef1f6;
   display: flex;
   justify-content: center;

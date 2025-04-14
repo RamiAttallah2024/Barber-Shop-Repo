@@ -1,4 +1,12 @@
 /* Signup container */
+
+.signup-container {
+  background-color: #eef1f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .signup-box {
   background: white;
   padding: 40px;

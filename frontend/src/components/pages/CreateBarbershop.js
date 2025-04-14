@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../../css/createBarbershop.css";
+import Navbar from "../Parts/Navbar";
 
 const CreateBarbershop = () => {
   const [name, setName] = useState("");
@@ -29,6 +31,7 @@ const CreateBarbershop = () => {
 
   return (
     <div className="form-container">
+      <Navbar />
       <h2>Create Barbershop</h2>
       <form onSubmit={handleSubmit}>
         <input

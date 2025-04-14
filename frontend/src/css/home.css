@@ -1,12 +1,36 @@
-/* General Styles */
-.app-container {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Top Navigation Bar */
+body,
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+button {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
 .top-navbar {
   background-color: #0073e6;
   color: white;
@@ -15,26 +39,25 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem 2rem;
 }
 
-/* Logo */
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #fff;
 }
 
-/* Desktop Navigation Links */
+/* Nav Links */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -42,66 +65,61 @@
 }
 
 .nav-link {
-  color: #ecf0f1;
-  text-decoration: none;
+  color: #ffffffd9;
   font-weight: 500;
   position: relative;
-  transition: color 0.3s ease;
+  padding-bottom: 2px;
 }
 
-/* .nav-link:hover {
-  color: #f1c40f;
+.nav-link:hover,
+.nav-link:focus {
+  color: #ffdd57;
 }
 
 .nav-link::after {
   content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
+  display: block;
   height: 2px;
-  background-color: #f1c40f;
+  background: #ffdd57;
   transition: width 0.3s ease;
+  width: 0%;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link:focus::after {
   width: 100%;
-} */
+}
 
-/* Logout Button on Desktop */
+/* Logout Button */
 .logout-btn {
   background: none;
   border: none;
-  color: #ecf0f1;
+  color: #ffffffd9;
   font-weight: 500;
   cursor: pointer;
-  padding: 0;
-  position: relative;
   transition: color 0.3s ease;
-  font-size: 16px;
 }
 
-/* .logout-btn:hover {
-  color: #e74c3c;
-} */
+.logout-btn:hover {
+  color: #ff6b6b;
+}
 
-/* Mobile Menu Button */
+/* Hamburger Menu Button */
 .menu-button {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
   height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .menu-icon {
-  width: 100%;
   height: 3px;
   background-color: #fff;
+  border-radius: 2px;
   transition: all 0.3s ease;
 }
 
@@ -121,13 +139,13 @@
 .mobile-menu {
   display: none;
   flex-direction: column;
-  background-color: #34495e;
+  background-color: #2c3e50;
   padding: 1rem 2rem;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .mobile-menu.open {
@@ -136,10 +154,8 @@
 
 .mobile-link {
   color: #ecf0f1;
-  text-decoration: none;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: color 0.3s ease;
 }
 
 .mobile-link:hover {
@@ -162,18 +178,42 @@
   background-color: #c0392b;
 }
 
-/* Page Content */
+/* Main Content */
 .page-content {
-  margin-top: 80px;
+  margin-top: 90px;
   padding: 2rem;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.page-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* CTA Button */
 .creatre-barbershop {
-  color: #c0392b;
+  background-color: #0073e6;
+  color: white;
+  padding: 15px 45px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Responsive Styles */
+.creatre-barbershop:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -184,6 +224,6 @@
   }
 
   .nav-content {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
   }
 }
