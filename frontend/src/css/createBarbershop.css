@@ -1,60 +1,80 @@
-/* Container */
+/* Overall container */
 .form-container {
   max-width: 500px;
-  margin: 100px auto 40px;
-  background-color: #fff;
-  padding: 2rem 2.5rem;
+  margin: auto;
+  padding: 2rem;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading */
+/* Title */
 .form-container h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
-/* Input Fields */
-.form-container input {
+/* Inputs */
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="datetime-local"],
+.form-container input[type="time"] {
   width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 1rem;
+  padding: 10px;
+  margin: 8px 0 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 16px;
-  transition: border 0.3s ease;
 }
 
-.form-container input:focus {
-  border-color: #0073e6;
-  outline: none;
-}
-
-/* Submit Button */
-.form-container button {
+/* Submit button */
+.form-container button[type="submit"] {
   width: 100%;
-  background-color: #0073e6;
+  padding: 12px;
+  background-color: #4caf50;
   color: white;
-  padding: 14px;
   border: none;
-  border-radius: 50px;
-  font-size: 18px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.form-container button:hover {
-  background-color: #005bb5;
-  transform: translateY(-2px);
+.form-container button[type="submit"]:hover {
+  background-color: #45a049;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 600px) {
-  .form-container {
-    margin: 90px 20px 40px;
-    padding: 1.5rem;
-  }
+/* Checkbox group */
+.checkbox-group {
+  margin: 20px 0;
+}
+
+.checkbox-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.checkbox-days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #f8f8f8;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkbox-item:hover {
+  background: #e6f7ff;
+}
+
+.checkbox-item input[type="checkbox"] {
+  transform: scale(1.2);
 }

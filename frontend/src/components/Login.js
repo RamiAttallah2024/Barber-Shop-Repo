@@ -49,7 +49,7 @@ const Login = () => {
       });
       localStorage.setItem("token", response.data.token);
       setMessage(translations[language].success);
-      navigate("/homePage");
+      navigate("/homePage", { state: { role: response.data.role } });
     } catch (error) {
       setMessage(translations[language].error);
     }

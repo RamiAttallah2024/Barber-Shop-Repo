@@ -61,8 +61,6 @@ app.post("/login", async (req, res) => {
 
 // Create Barbershop Route
 app.post("/create-barbershop", async (req, res) => {
-  const workTimeFormatted = new Date(work_time);
-
   const { name, lat, lng, work_time, day_time, phone_number, owner_id } =
     req.body;
 
@@ -71,12 +69,13 @@ app.post("/create-barbershop", async (req, res) => {
       `INSERT INTO barbershops (name, lat, lng, work_time, day_time, phone_number, owner_id)
        VALUES ($1, $2, $3, $4, $5, $6, $7)
        RETURNING *`,
-      [name, lat, lng, workTimeFormatted, day_time, phone_number, owner_id]
+      [name, lat, lng, work_time, day_time, phone_number, owner_id]
     );
     res
       .status(201)
       .json({ message: "Barbershop created", barbershop: result.rows[0] });
   } catch (error) {
+    console.error("Database error:", error);
     res.status(500).json({ message: "Error creating barbershop", error });
   }
 });
